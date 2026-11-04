@@ -214,3 +214,121 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.photo-gallery figure {
+  margin: 0;
+}
+
+.photo-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.photo-gallery figcaption,
+.image-note,
+.map-caption {
+  margin-top: 0.5rem;
+  color: #46564b;
+  font-size: 0.875rem;
+}
+
+.map-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.map-panel {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid #b7c0b7;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.festival-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.festival-map text {
+  fill: #202923;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.map-road {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 24;
+}
+
+.map-route {
+  fill: none;
+  stroke: #234c78;
+  stroke-width: 5;
+  stroke-dasharray: 9 7;
+}
+
+.map-point {
+  fill: #234c78;
+  stroke: #fff;
+  stroke-width: 4;
+}
+
+.map-caption {
+  margin-bottom: 0;
+}
+
+.venue-addresses {
+  font-style: normal;
+}
+
+.venue-addresses > div {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 4px solid var(--colore-primario);
+  background: #fff;
+}
+
+.venue-addresses h3,
+.venue-addresses p {
+  margin-top: 0;
+}
+
+.venue-addresses p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .map-layout {
+    grid-template-columns: 3fr 2fr;
+  }
+}
