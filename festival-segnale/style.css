@@ -330,3 +330,62 @@ h3 {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   }
 }
+/* Galleria Swiper della pagina Info e luoghi. */
+.luoghi-swiper {
+  width: 100%;
+  max-width: 54rem;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.luoghi-swiper .swiper-slide {
+  min-width: 0;
+  margin: 0;
+  background: #fff;
+}
+
+.luoghi-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.luoghi-swiper figcaption {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem;
+}
+
+.luoghi-swiper figcaption span {
+  color: #46564b;
+  font-size: 0.875rem;
+}
+
+.luoghi-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0 1rem 1rem;
+  background: #fff;
+}
+
+.luoghi-controls button {
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: var(--colore-primario);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.luoghi-controls button:hover {
+  background: var(--colore-primario-scuro);
+}
+
+.luoghi-controls button:focus-visible {
+  outline: 3px solid var(--colore-testo);
+  outline-offset: 3px;
+}

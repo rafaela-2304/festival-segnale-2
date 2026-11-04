@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Info e luoghi — Segnale</title>
   <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/14.4.0/swiper-bundle.min.css">
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -35,80 +38,111 @@
     </section>
 
     <section class="content-section" aria-labelledby="galleria-titolo">
-      <h2 id="galleria-titolo">Gli spazi del festival</h2>
+  <h2 id="galleria-titolo">Gli spazi del festival</h2>
 
-      <div class="photo-gallery">
-        <figure>
-          <img src="assets/officina-nord.jpg" alt="Interno luminoso di uno spazio per incontri">
-          <figcaption>Officina Nord · incontri e progetti condivisi</figcaption>
-        </figure>
+  <div class="swiper luoghi-swiper">
+    <div class="swiper-wrapper">
+      <figure class="swiper-slide">
+        <img
+          src="assets/luoghi/officina-nord.jpg"
+          alt="Interno di Officina Nord, sede degli incontri e dei progetti condivisi">
+        <figcaption>
+          <strong>Officina Nord</strong>
+          <span>Incontri e progetti condivisi.</span>
+        </figcaption>
+      </figure>
 
-        <figure>
-          <img src="assets/spazio-forma.jpg" alt="Tavolo da lavoro con materiali e strumenti">
-          <figcaption>Spazio Forma · laboratori e sperimentazioni</figcaption>
-        </figure>
+      <figure class="swiper-slide">
+        <img
+          src="assets/luoghi/spazio-forma.jpg"
+          alt="Tavolo da lavoro di Spazio Forma, sede dei laboratori">
+        <figcaption>
+          <strong>Spazio Forma</strong>
+          <span>Laboratori e sperimentazioni.</span>
+        </figcaption>
+      </figure>
 
-        <figure>
-          <img src="assets/cortile-comune.jpg" alt="Cortile con pareti adatte a ospitare una mostra">
-          <figcaption>Cortile Comune · mostre e percorsi</figcaption>
-        </figure>
-      </div>
+      <figure class="swiper-slide">
+        <img
+          src="assets/luoghi/cortile-comune.jpg"
+          alt="Cortile Comune, spazio destinato a mostre e percorsi">
+        <figcaption>
+          <strong>Cortile Comune</strong>
+          <span>Mostre e percorsi.</span>
+        </figcaption>
+      </figure>
+    </div>
 
-      <p class="image-note">
-        Le fotografie sono da aggiungere nella cartella assets, oppure puoi aggiornare i percorsi dei file.
-      </p>
-    </section>
+    <div class="luoghi-controls">
+      <button class="luoghi-prev" type="button" aria-label="Fotografia precedente">
+        Precedente
+      </button>
+      <button class="luoghi-next" type="button" aria-label="Fotografia successiva">
+        Successiva
+      </button>
+    </div>
+  </div>
+</section>
+
 
     <section class="content-section" aria-labelledby="mappa-titolo">
-      <h2 id="mappa-titolo">Mappa e indirizzi</h2>
-      <p class="reading-text">
-        La mappa è schematica e mostra solo la posizione relativa delle sedi.
-        Gli indirizzi sono segnaposto.
-      </p>
+  <h2 id="mappa-titolo">Mappa e indirizzi</h2>
 
-      <div class="map-layout">
-        <div class="map-panel">
-          <svg class="festival-map" viewBox="0 0 600 360" role="img"
-               aria-labelledby="map-title map-desc">
-            <title id="map-title">Mappa schematica delle sedi del festival</title>
-            <desc id="map-desc">
-              Tre sedi immaginarie collegate da un percorso: Officina Nord,
-              Spazio Forma e Cortile Comune.
-            </desc>
+  <div class="map-panel">
+    <iframe
+      class="umap-iframe"
+      src="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665#14/45.046875/7.649660"
+      title="Mappa delle tre sedi del festival Segnale a Torino"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
 
-            <rect width="600" height="360" fill="#e9e5d9"/>
-            <path class="map-road" d="M0 95 H600 M0 265 H600 M120 0 V360 M430 0 V360"/>
-            <path class="map-route" d="M120 95 L300 180 L430 265"/>
+    <p class="map-caption">
+      <a
+        href="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665#14/45.046875/7.649660"
+        target="_blank"
+        rel="noopener noreferrer">
+        Apri la mappa a schermo intero
+      </a>
+    </p>
+  </div>
 
-            <circle class="map-point" cx="120" cy="95" r="12"/>
-            <circle class="map-point" cx="300" cy="180" r="12"/>
-            <circle class="map-point" cx="430" cy="265" r="12"/>
+  <div class="venue-addresses">
+    <article class="venue-address">
+      <h3>Sede centrale</h3>
+      <address>Corso Duca degli Abruzzi 24, Torino</address>
+      <a
+        href="https://www.google.com/maps/dir/?api=1&amp;destination=Corso+Duca+degli+Abruzzi+24%2C+Torino"
+        target="_blank"
+        rel="noopener noreferrer">
+        Indicazioni stradali
+      </a>
+    </article>
 
-            <text x="140" y="88">Officina Nord</text>
-            <text x="318" y="173">Spazio Forma</text>
-            <text x="448" y="258">Cortile Comune</text>
-          </svg>
-          <p class="map-caption">Mappa illustrativa, non in scala.</p>
-        </div>
+    <article class="venue-address">
+      <h3>Politecnico al Valentino</h3>
+      <address>Viale Mattioli 39, Torino</address>
+      <a
+        href="https://www.google.com/maps/dir/?api=1&amp;destination=Viale+Mattioli+39%2C+Torino"
+        target="_blank"
+        rel="noopener noreferrer">
+        Indicazioni stradali
+      </a>
+    </article>
 
-        <address class="venue-addresses">
-          <div>
-            <h3>Officina Nord</h3>
-            <p>Via delle Lettere 12<br>10100 Torino</p>
-          </div>
+    <article class="venue-address">
+      <h3>Sede di Mirafiori</h3>
+      <address>Corso Luigi Settembrini 178, Torino</address>
+      <a
+        href="https://www.google.com/maps/dir/?api=1&amp;destination=Corso+Luigi+Settembrini+178%2C+Torino"
+        target="_blank"
+        rel="noopener noreferrer">
+        Indicazioni stradali
+      </a>
+    </article>
+  </div>
+</section>
 
-          <div>
-            <h3>Spazio Forma</h3>
-            <p>Via dei Materiali 8<br>10100 Torino</p>
-          </div>
-
-          <div>
-            <h3>Cortile Comune</h3>
-            <p>Piazza delle Idee 3<br>10100 Torino</p>
-          </div>
-        </address>
-      </div>
-    </section>
 
     <section class="content-section" aria-labelledby="info-pratiche-titolo">
       <h2 id="info-pratiche-titolo">Informazioni pratiche</h2>
@@ -124,5 +158,16 @@
       <p>Segnale · Progetto didattico · Festival immaginario</p>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/14.4.0/swiper-bundle.min.js"></script>
+<script>
+  new Swiper(".luoghi-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      prevEl: ".luoghi-prev",
+      nextEl: ".luoghi-next"
+    }
+  });
+</script>
 </body>
 </html>
