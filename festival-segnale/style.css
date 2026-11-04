@@ -1,6 +1,5 @@
-/* Segnale: esempio completo della consegna su Home e Programma. */
+/* Segnale: stili condivisi per tutte le pagine. */
 
-/* Valori condivisi: le regole interessate li richiamano con var(). */
 :root {
   --colore-primario: #234c78;
   --colore-primario-scuro: #163454;
@@ -63,15 +62,22 @@ a:focus {
 }
 
 nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
   margin-top: 1rem;
 }
 
 nav a {
   display: inline-block;
-  margin-right: 1rem;
   padding: 0.25rem 0;
 }
 
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
 
 .intro {
   padding: 3rem 0 1rem;
@@ -121,7 +127,7 @@ h3 {
   padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
   background: var(--colore-primario);
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
 }
@@ -151,18 +157,19 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Disposizione di base: una colonna. */
+/* Programma: una colonna di base. */
 .event-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
 }
 
 .event-card {
+  min-width: 0;
   overflow: hidden;
   border: 1px solid #b7c0b7;
   border-radius: 0.75rem;
-  background: #ffffff;
+  background: #fff;
 }
 
 .event-card img {
@@ -181,52 +188,15 @@ h3 {
   font-size: 0.875rem;
 }
 
-.site-footer {
-  padding: 1.25rem 0;
-  border-top: 1px solid #b7c0b7;
-  color: #46564b;
-  font-size: 0.875rem;
-}
-
-.skip-link {
-  position: absolute;
-  top: -6rem;
-  left: 1rem;
-  padding: 0.75rem 1rem;
-  background: #ffffff;
-  color: var(--colore-testo);
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
-/* Da 600 px: due colonne. */
-@media (min-width: 600px) {
-  .event-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Da 1024 px: tre colonne. Questa regola segue quella da 600 px. */
-@media (min-width: 1024px) {
-  .event-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-nav a[aria-current="page"] {
-  font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-}
-
+/* Galleria della pagina Info. */
 .photo-gallery {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
 }
 
 .photo-gallery figure {
+  min-width: 0;
   margin: 0;
 }
 
@@ -246,9 +216,10 @@ nav a[aria-current="page"] {
   font-size: 0.875rem;
 }
 
+/* Mappa e indirizzi della pagina Info. */
 .map-layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -298,6 +269,8 @@ nav a[aria-current="page"] {
 }
 
 .venue-addresses {
+  min-width: 0;
+  margin: 0;
   font-style: normal;
 }
 
@@ -317,18 +290,43 @@ nav a[aria-current="page"] {
   margin-bottom: 0;
 }
 
+.site-footer {
+  padding: 1.25rem 0;
+  border-top: 1px solid #b7c0b7;
+  color: #46564b;
+  font-size: 0.875rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: -6rem;
+  left: 1rem;
+  z-index: 1;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: var(--colore-testo);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Da 600 px: due colonne. */
 @media (min-width: 600px) {
+  .event-grid,
   .photo-gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* Da 1024 px: tre colonne per eventi e galleria. */
 @media (min-width: 1024px) {
+  .event-grid,
   .photo-gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .map-layout {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   }
 }
