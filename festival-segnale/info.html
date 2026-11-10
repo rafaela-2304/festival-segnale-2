@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Info e luoghi — Segnale</title>
   <link rel="stylesheet" href="style.css">
-  <link
+<link
   rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/14.4.0/swiper-bundle.min.css">
+  href="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.css">
+
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -40,48 +41,49 @@
     <section class="content-section" aria-labelledby="galleria-titolo">
   <h2 id="galleria-titolo">Gli spazi del festival</h2>
 
-  <div class="swiper luoghi-swiper">
-    <div class="swiper-wrapper">
-      <figure class="swiper-slide">
-        <img
-          src="assets/luoghi/officina-nord.jpg"
-          alt="Interno di Officina Nord, sede degli incontri e dei progetti condivisi">
-        <figcaption>
-          <strong>Officina Nord</strong>
-          <span>Incontri e progetti condivisi.</span>
-        </figcaption>
-      </figure>
+<div class="swiper luoghi-swiper">
+  <div class="swiper-wrapper">
+    <figure class="swiper-slide">
+      <img
+        src="../Assets/luoghi/sede-centrale.jpg"
+        alt="Interno della sede centrale di Officina Nord, in Corso Duca degli Abruzzi 24 a Torino">
+      <figcaption>
+        <strong>Sede centrale — Corso Duca degli Abruzzi 24</strong>
+        <span>Officina Nord nel festival immaginario.</span>
+      </figcaption>
+    </figure>
 
-      <figure class="swiper-slide">
-        <img
-          src="assets/luoghi/spazio-forma.jpg"
-          alt="Tavolo da lavoro di Spazio Forma, sede dei laboratori">
-        <figcaption>
-          <strong>Spazio Forma</strong>
-          <span>Laboratori e sperimentazioni.</span>
-        </figcaption>
-      </figure>
+    <figure class="swiper-slide">
+      <img
+        src="../Assets/luoghi/politecnico-valentino.jpg"
+        alt="Fotografia del Politecnico al Valentino, in Viale Mattioli 39 a Torino">
+      <figcaption>
+        <strong>Politecnico al Valentino — Viale Mattioli 39</strong>
+        <span>Spazio Forma nel festival immaginario.</span>
+      </figcaption>
+    </figure>
 
-      <figure class="swiper-slide">
-        <img
-          src="assets/luoghi/cortile-comune.jpg"
-          alt="Cortile Comune, spazio destinato a mostre e percorsi">
-        <figcaption>
-          <strong>Cortile Comune</strong>
-          <span>Mostre e percorsi.</span>
-        </figcaption>
-      </figure>
-    </div>
-
-    <div class="luoghi-controls">
-      <button class="luoghi-prev" type="button" aria-label="Fotografia precedente">
-        Precedente
-      </button>
-      <button class="luoghi-next" type="button" aria-label="Fotografia successiva">
-        Successiva
-      </button>
-    </div>
+    <figure class="swiper-slide">
+      <img
+        src="../Assets/luoghi/mirafiori.jpg"
+        alt="Fotografia della sede di Mirafiori, in Corso Luigi Settembrini 178 a Torino">
+      <figcaption>
+        <strong>Sede di Mirafiori — Corso Luigi Settembrini 178</strong>
+        <span>Cortile Comune nel festival immaginario.</span>
+      </figcaption>
+    </figure>
   </div>
+
+  <div class="luoghi-controls">
+    <button class="luoghi-prev" type="button" aria-label="Fotografia precedente">
+      Precedente
+    </button>
+    <button class="luoghi-next" type="button" aria-label="Fotografia successiva">
+      Successiva
+    </button>
+  </div>
+</div>
+
 </section>
 
 
@@ -90,21 +92,24 @@
 
   <div class="map-panel">
     <iframe
-      class="umap-iframe"
-      src="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665#14/45.046875/7.649660"
-      title="Mappa delle tre sedi del festival Segnale a Torino"
-      allowfullscreen
-      loading="lazy">
+        id="mappa-sedi"
+        class="umap-iframe"
+        title="Mappa delle tre sedi di riferimento per il festival Segnale a Torino"
+        src="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleControl=false&amp;miniMapControl=false&amp;scrollWheelZoom=false&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=true#12/45.0465/7.6528"
+        allowfullscreen
+        loading="lazy">
     </iframe>
 
+
     <p class="map-caption">
-      <a
-        href="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665#14/45.046875/7.649660"
+        <a
+        href="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleControl=false&amp;miniMapControl=false&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=true#12/45.0465/7.6528"
         target="_blank"
         rel="noopener noreferrer">
-        Apri la mappa a schermo intero
-      </a>
+        Visualizza la mappa a schermo intero
+        </a>
     </p>
+
   </div>
 
   <div class="venue-addresses">
@@ -158,7 +163,7 @@
       <p>Segnale · Progetto didattico · Festival immaginario</p>
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/14.4.0/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"></script>
 <script>
   new Swiper(".luoghi-swiper", {
     slidesPerView: 1,
